@@ -1,9 +1,16 @@
 import React from "react"
+import {Route} from "react-router-dom"
+import Login from './Login'
+import Home from './Home'
+import '../Style/main.css'
+import Register from "./Register";
 
 const App = () => {
     return(
-        <div>
-            Hello!
+        <div className="container-fluid fullWidth">
+            <Route exact={true} path="/" component={Home}/>
+            <Route exact={true} path="/login" component={Login}/>
+            <Route exact={true} path="/register" component={Register}/>
         </div>
     )
 }

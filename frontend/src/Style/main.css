@@ -1,0 +1,27 @@
+.login-container{
+    background-color: #dcdcdc;
+    max-width: 30rem;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+}
+
+.input{
+    margin-bottom: 1rem;
+}
+
+.login-button{
+    margin-top: 2rem;
+}
+
+.login-info{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.change-type-login{
+    text-align: center;
+    text-decoration: none;
+}
