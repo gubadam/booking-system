@@ -1,9 +1,9 @@
 import React from "react"
 import {Route} from "react-router-dom"
-import Login from './Login'
+import Login from './LoginManagement/Login'
 import Home from './Home'
 import '../Style/main.css'
-import Register from "./Register";
+import Register from "./LoginManagement/Register";
 
 const App = () => {
     return(
