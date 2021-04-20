@@ -12,7 +12,7 @@ const Login = () =>{
         const token = btoa(unescape(encodeURIComponent(`${user.login}:${user.password}`)))
         const toHeader = `Basic ${token}`
 
-        axios.get("http://localhost:8080", {
+        axios.get("http://localhost:8080/api/basicauth", {
             headers: {
                 'Authorization': toHeader
             }

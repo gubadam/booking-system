@@ -6,11 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping(path = "/api")
 @CrossOrigin(origins = "http://localhost:3000")
 public class RootController {
-    @GetMapping(path = "/")
-    public String getRoot(){
-        return "Hello";
+
+    @GetMapping(path = "/basicauth")
+    public AuthenticationBean authenticate() {
+
+        //throw new RuntimeException("Some Error has Happened! Contact Support at ***-***");
+        return new AuthenticationBean("You are authenticated");
+    }
+
+    @GetMapping(path = "/users")
+    public String users() {
+        return "Users";
     }
 }
