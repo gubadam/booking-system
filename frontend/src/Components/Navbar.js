@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { LogOut } from "./LoginManagement/Logout"
 
 const Navbar = () => {
     return(
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-dark navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">Booking System</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -16,6 +17,7 @@ const Navbar = () => {
                         <Link to="/" className={"nav-item nav-link active"}><div className="textLink">Home</div> </Link>
                         <Link to="/login" className={"nav-item nav-link my-auto"}><div className='textLink'>Zaloguj się</div></Link>
                         <Link to="/register" className={"nav-item nav-link my-auto"}><div className='textLink'>Zarejestruj się</div> </Link>
+                        <div className={'nav-item nav-link my-auto text-link'} onClick={() => LogOut()}>Wyloguj</div>
                     </div>
                 </div>
             </nav>

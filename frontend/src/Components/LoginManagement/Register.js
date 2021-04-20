@@ -34,14 +34,13 @@ const Register = () => {
                     <div className={"row input"}>
                         <div className={"col"}>
                             <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text" id="">Login</span>
-                                </div>
                                 <input
                                     type="text"
                                     className="form-control"
                                     value={user.login}
                                     onChange={(e) => {setUser({...user, login: e.target.value})}}
+                                    placeholder={"Login"}
+                                    required
                                 />
                             </div>
                         </div>
@@ -49,26 +48,25 @@ const Register = () => {
                     <div className={"row input"}>
                         <div className={"col"}>
                             <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text" id="">Hasło</span>
-                                </div>
                                 <input
                                     type="password"
                                     className="form-control"
                                     value={user.password}
                                     onChange={(e) => {setUser({...user, password: e.target.value})}}
+                                    placeholder={"Hasło"}
+                                    required
                                 />
                             </div>
                         </div>
                     </div>
                     <div className={"row"}>
                         <div className={"col"}>
-                            <Link to={"/login"}><div className={"textLink change-type-login"}>Masz konto? Zaloguj się</div> </Link>
+                            <Link to={"/login"} className={"text-link"}><div className={"text-link change-type-login"}>Masz konto? Zaloguj się</div> </Link>
                         </div>
                     </div>
                     <div className={"row login-button"}>
                         <div className={"col"}>
-                            <button type={"submit"} className={"btn btn-success"}>Zarejestruj</button>
+                            <button type={"submit"} className={"btn btn btn-primary"}>Zarejestruj</button>
                         </div>
                     </div>
                 </form>
